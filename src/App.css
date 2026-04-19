@@ -1,0 +1,40 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  padding: 18px 16px;
+  border-top: 1px solid rgba(17, 24, 39, 0.12);
+}
+
+.footerInner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.meta {
+  opacity: 0.85;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-top-color: rgba(243, 244, 246, 0.14);
+  }
+}
