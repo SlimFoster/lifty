@@ -8,6 +8,121 @@
   flex: 1;
 }
 
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 16px 24px;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.6px;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  opacity: 0.85;
+  max-width: 52ch;
+}
+
+.card {
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.row + .row {
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.rowLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rowTitle {
+  font-weight: 600;
+}
+
+.rowHint {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.rowFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.unit {
+  font-size: 12px;
+  opacity: 0.75;
+  text-transform: lowercase;
+  letter-spacing: 0.4px;
+}
+
+.field input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+
+.warning {
+  margin: 10px 12px 0;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.metaRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 12px 0;
+}
+
+.metaPill {
+  font-size: 12px;
+  opacity: 0.8;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
 .footer {
   padding: 18px 16px;
   border-top: 1px solid rgba(17, 24, 39, 0.12);
@@ -34,7 +149,32 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .card {
+    border-color: rgba(243, 244, 246, 0.14);
+    background: rgba(10, 14, 28, 0.35);
+  }
+
+  .row + .row {
+    border-top-color: rgba(243, 244, 246, 0.08);
+  }
+
+  .field {
+    border-color: rgba(243, 244, 246, 0.14);
+    background: rgba(10, 14, 28, 0.35);
+  }
+
+  .metaPill {
+    border-color: rgba(243, 244, 246, 0.14);
+  }
+
   .footer {
     border-top-color: rgba(243, 244, 246, 0.14);
+  }
+}
+
+@media (min-width: 720px) {
+  .row {
+    grid-template-columns: 260px 1fr;
+    align-items: center;
   }
 }
