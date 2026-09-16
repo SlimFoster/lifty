@@ -23,15 +23,15 @@ To preview the production build locally:
 npm run preview
 ```
 
-## Deploy (Azure Static Web Apps)
+## Deploy (GitHub Pages)
 
-- **Build command**: `npm run build`
-- **Output folder**: `dist`
+- The GitHub Actions workflow builds with Node.js `22.x`.
+- On pushes to `main`, the `dist/` artifact is deployed to GitHub Pages.
 
 Notes:
 
 - This is a static site after build (no server required).
-- If you use GitHub Actions via Static Web Apps, the app artifact should point to `dist`.
+- The app artifact path is `dist`.
 
 # React + TypeScript + Vite
 
